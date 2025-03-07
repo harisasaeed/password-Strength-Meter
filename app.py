@@ -1,3 +1,4 @@
+
 import streamlit as st
 import re
 import random
@@ -63,9 +64,11 @@ if password:
     for note in feedback:
         st.error(note)
 else:
-    st.warning("Please enter a password to check.")
+    st.warning("Please enter a password to check!")
 
-# Suggest a strong password
-if st.checkbox("Show a suggested strong password"):
+# Button to suggest strong password
+if st.button("Suggest a Strong Password"):
     suggested_password = suggest_strong_password()
     st.write(f"Suggested Strong Password: **{suggested_password}**")
+
+
